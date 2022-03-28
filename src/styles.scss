@@ -50,7 +50,7 @@ h6 {
 
 p {
   margin: 0;
-  font-size: 16pt;
+  font-size: 15pt;
 }
 
 a:hover {
@@ -120,6 +120,10 @@ a:hover {
   word-wrap: normal;
   padding-top: 75px;
   padding-bottom: 75px;
+}
+
+.content-container p {
+  padding-bottom: 30px; 
 }
 
 @keyframes card-hover-float {

@@ -30,7 +30,17 @@
     height: 30px;
     margin: 15px;
     background-color: #41bfff;
-    border: black solid 3px;
+    border: white solid 3px;
+}
+
+.carousel-indicators .active {
+    animation: pulsate 1s ease-out infinite;
+}
+
+@keyframes pulsate {
+    0%   { box-shadow: 0 0 0 aqua; }
+    50%  { box-shadow: 0 0 17px aqua; }
+    100% { box-shadow: 0 0 0 aqua; }
 }
 
 .carousel-contianer {
