@@ -69,6 +69,7 @@ a:hover {
 }
 
 .card-img-top {
+  border-radius: 0;
   width: 100%;
   height: 15vw;
   min-height: 300px;
@@ -76,6 +77,8 @@ a:hover {
 }
 
 .card {
+
+  border-radius: 0;
   text-decoration: none;
   color: black;
 
@@ -124,6 +127,11 @@ a:hover {
 
 .content-container p {
   padding-bottom: 30px; 
+}
+
+.content-container h1, h2, h3, h4 {
+  padding-top: 10px;
+  padding-bottom: 10px; 
 }
 
 @keyframes card-hover-float {
@@ -195,6 +203,38 @@ a:hover {
 
 /* Page Header Falling Animation */
 
+.header-title {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 920px;
+
+  
+  /* padding-bottom: 30px; */
+
+  bottom: 40%;
+  /* top: 0; */
+
+  left: 0;
+  right: 0;
+  color: white;
+}
+
+@media (max-width: 2000px) {
+  .header-title h1  {
+    font-size: 90pt;
+  }
+}
+
+@media (max-width: 770px) {
+  .header-title h1  {
+    font-size: 60pt;
+  }
+}
+
+
 .test-ani-container {
   display: block;
 
@@ -256,4 +296,18 @@ a:hover {
 .cards-padding {
   padding-top: 120px;
   padding-bottom: 120px;
+}
+
+.pulse-animation {
+  animation: pulsate 1s ease-out infinite;
+}
+
+@keyframes pulsate {
+  0%   { box-shadow: 0 0 0 aqua; }
+  50%  { box-shadow: 0 0 17px aqua; }
+  100% { box-shadow: 0 0 0 aqua; }
+}
+
+.scale-pulse {
+  animation: card-hover-float 1s ease-out infinite;
 }

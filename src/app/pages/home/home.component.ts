@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private viewportScroll: ViewportScroller) { }
 
   ngOnInit(): void {
+  }
+
+  public onClick(elem: string): void {
+    this.viewportScroll.setOffset([90, 90]);
+    this.viewportScroll.scrollToAnchor(elem);
   }
 
 }
