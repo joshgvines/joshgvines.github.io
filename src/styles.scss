@@ -1,0 +1,255 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+.ng-cloak {
+  display: none !important;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.primary-color {
+  // background-color: #41bfff;
+  background-image: linear-gradient(to right, whitesmoke, white, whitesmoke);
+  color: black;
+}
+
+.secondary-color {
+  background-color: #41bfff;
+  color: black;
+}
+
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+
+html {
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 8px 5px 0 0;
+  font-family: "Anton", sans-serif;
+  margin: 8px 0;
+}
+
+p {
+  margin: 0;
+  font-size: 16pt;
+}
+
+a:hover {
+  color: #41bfff;
+}
+
+.main-content-container,
+.header-content-container,
+.footer-content-container {
+  height: auto;
+  margin: 0;
+}
+
+.header-content-container a {
+  font-family: "Anton", sans-serif;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  min-height: 300px;
+  object-fit: cover;
+}
+
+.card {
+  text-decoration: none;
+  color: black;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+
+  max-width: 400px;
+  min-width: 300px;
+  height: 480px;
+  box-shadow: 2px, 2px, 10px grey;
+}
+
+.card:hover {
+  animation: card-hover-float 1.1s infinite;
+}
+
+.card p {
+  font-size: 12.5pt;
+}
+
+.page-spacer {
+  padding-top: 80px;
+}
+
+.page-header {
+  z-index: -1;
+  position: fixed;
+  background-size: cover;
+  background-position: center;
+  min-height: 100px;
+  max-height: 1200px;
+  height: 100vh;
+  width: 100%;
+  background-image: url("/assets/img/skyrim-background.jpg");
+}
+
+.content-container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 920px;
+  word-wrap: normal;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+@keyframes card-hover-float {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.fade-in-page {
+  animation: fadeIn 0.5s;
+  -webkit-animation: fadeIn 0.5s;
+  -moz-animation: fadeIn 0.5s;
+  -o-animation: fadeIn 0.5s;
+  -ms-animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Page Header Falling Animation */
+
+.test-ani-container {
+  display: block;
+
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  padding: 30px;
+  min-width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.test-ani {
+  display: block;
+
+  position: absolute;
+
+  width: var(--width);
+  height: var(--height);
+
+  background-color: white;
+  border-radius: 50%;
+  margin: auto;
+  padding: 0;
+}
+
+@keyframes falling {
+  0% {
+    transform: translate3d(var(--left-ini), 0, 0) rotate(random(900) + 10 + deg);
+  }
+  100% {
+    transform: translate3d(var(--left-end), 100vh, 0);
+  }
+}
+
+@for $i from 1 through 25 {
+  .test-ani:nth-child(#{$i}) {
+    --width: 5px;
+    --height: 5px;
+    --left-ini: #{random(20) - 10}vw;
+    --left-end: #{random(20) - 10}vw;
+    left: #{random(100)}vw;
+    animation: falling #{5 + random(15)}s linear infinite;
+    animation-duration: -#{1 + random(11)}s;
+  }
+}
+
+.title-banner {
+  height: 80px;
+  text-align: center;
+}
+
+.title-banner h2 {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.25em;
+}
+
+.cards-padding {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}

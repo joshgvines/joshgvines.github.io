@@ -1,0 +1,12 @@
+
+<header class="header-content-container">
+    <app-top-nav-bar></app-top-nav-bar>
+</header>
+
+<main class="{{ this.preLoad }} main-content-container">
+    <router-outlet (activate)="onActivate()"></router-outlet>
+</main>
+
+<footer class="{{ this.preLoad }} footer-content-container">
+    <app-bot-nav-bar></app-bot-nav-bar>
+</footer>
