@@ -1,5 +1,6 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
@@ -8,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor(private viewportScroll: ViewportScroller) { }
+  constructor(private viewportScroll: ViewportScroller, private title: Title) { }
 
   ngOnInit(): void {
+    this.title.setTitle("About");
   }
 
   public onClick(elem: string): void {

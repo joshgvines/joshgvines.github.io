@@ -125,8 +125,20 @@ a:hover {
   padding-bottom: 75px;
 }
 
+.content-container img {
+  margin: 3px;
+}
+
 .content-container p {
   padding-bottom: 30px; 
+}
+
+.content-container h2 {
+  font-size: 35pt;
+}
+
+.content-container h3 {
+  font-size: 20pt;
 }
 
 .content-container h1, h2, h3, h4 {
