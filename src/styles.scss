@@ -323,8 +323,8 @@ a:hover {
   }
 }
 
-@for $i from 1 through 25 {
-  .test-ani:nth-child(#{$i}) {
+@for $i from 1 through 20 {
+  .snow-ani:nth-child(#{$i}) {
     --width: 5px;
     --height: 5px;
     --left-ini: #{random(20) - 10}vw;
