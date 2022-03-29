@@ -116,6 +116,7 @@ a:hover {
 }
 
 .content-container {
+  padding: 10px;
   margin-right: auto;
   margin-left: auto;
   max-width: 920px;
@@ -289,7 +290,7 @@ a:hover {
 
 // Snow Falling Animations
 
-.test-ani-container {
+.snow-ani-container {
   display: block;
   position: absolute;
   padding: 0;
@@ -300,7 +301,7 @@ a:hover {
   overflow: hidden;
 }
 
-.test-ani {
+.snow-ani {
   display: block;
   position: absolute;
 
