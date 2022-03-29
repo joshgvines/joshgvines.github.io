@@ -13,8 +13,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.title.setTitle("Home");
-    this.meta.addTag({ property: 'description', contnet: 'Just Learning As I go.' });
-    this.meta.addTag({ property: 'og:image', contnet: '/assets/img/skyrim-background.jpg' });
+    this.meta.addTag({ property: 'description', content: 'Home | Just Learning As I go.' });
+    this.meta.addTag({ property: 'og:title', content: 'Home | joshgvines.com' });
+    this.meta.addTag({ property: 'og:description', content: 'Just Learning As I go.' });
+    this.meta.addTag({ property: 'og:image', content: 'https://joshgvines.com/assets/img/skyrim-background.jpg' });
+    this.meta.addTag({ property: 'robots', content: 'noindex' });
   }
 
   public onClick(elem: string): void {
