@@ -286,3 +286,50 @@ a:hover {
 .hover-pointer:hover {
   cursor: pointer;
 }
+
+// Snow Falling Animations
+
+.test-ani-container {
+  display: block;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.test-ani {
+  display: block;
+  position: absolute;
+
+  width: var(--width);
+  height: var(--height);
+
+  background-color: white;
+  border-radius: 50%;
+  margin: auto;
+  padding: 0;
+}
+
+@keyframes falling {
+  0% {
+    transform: translate3d(var(--left-ini), 0, 0) rotate(random(900) + 10 + deg);
+  }
+  100% {
+    transform: translate3d(var(--left-end), 100vh, 0);
+  }
+}
+
+@for $i from 1 through 25 {
+  .test-ani:nth-child(#{$i}) {
+    --width: 5px;
+    --height: 5px;
+    --left-ini: #{random(20) - 10}vw;
+    --left-end: #{random(20) - 10}vw;
+    left: #{random(100)}vw;
+    animation: falling #{5 + random(15)}s linear infinite;
+    animation-duration: -#{1 + random(11)}s;
+  }
+}
